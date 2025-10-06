@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Official resume website of Gidon Peeper — MSc AI student & researcher. Explore academic achievements, projects, and contact information." />
-    <meta name="keywords" content="Gidon Peeper, AI Researcher, MSc AI, Princeton, Hasson Lab" />
+    <meta name="keywords" content="Gidon Peeper, AI Researcher, Resume, MSc AI, Princeton, Hasson Lab" />
     <meta name="author" content="Gidon Peeper" />
     <title>Gidon Peeper — Resume</title>
 
@@ -22,15 +22,12 @@
             --glass: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
         }
 
-        /* Reset / base */
         * { box-sizing: border-box; }
-        html,body { height: 100%; }
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
             background: var(--bg);
             color: #0f1724;
-            -webkit-font-smoothing:antialiased;
             line-height: 1.5;
             padding: 40px 20px;
             display: flex;
@@ -47,61 +44,28 @@
             border: 1px solid rgba(30,91,187,0.06);
         }
 
-        /* Header */
         .header {
             display: flex;
             gap: 24px;
             align-items: center;
             margin-bottom: 18px;
         }
-
         .photo {
             width: 140px;
             height: 140px;
-            flex: 0 0 140px;
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid rgba(30,91,187,0.12);
             box-shadow: 0 6px 18px rgba(30,91,187,0.08);
-            background: linear-gradient(180deg, rgba(30,91,187,0.06), rgba(30,91,187,0.02));
         }
         .photo img { width: 100%; height: 100%; object-fit: cover; display:block; }
 
-        .hero {
-            flex: 1;
-            min-width: 0;
-        }
-        .name {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent);
-            letter-spacing: -0.4px;
-        }
-        .title {
-            margin: 6px 0 12px 0;
-            font-size: 15px;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        .summary {
-            color: var(--muted);
-            margin: 0;
-            font-size: 15px;
-        }
+        .hero { flex: 1; }
+        .name { margin: 0; font-size: 28px; font-weight: 700; color: var(--accent); }
+        .title { margin: 6px 0 12px 0; font-size: 15px; color: var(--primary); font-weight: 600; }
 
-        /* Contact row */
-        .contact {
-            margin-top: 12px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+        .contact { margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
         .contact a, .contact .item {
-            display: inline-flex;
-            gap: 8px;
-            align-items: center;
             color: var(--muted);
             font-weight: 600;
             text-decoration: none;
@@ -111,15 +75,8 @@
         }
         .contact a:hover { background: rgba(30,91,187,0.06); color: var(--accent); }
 
-        /* Layout */
-        .main {
-            display: grid;
-            grid-template-columns: 1fr 360px;
-            gap: var(--gap);
-            margin-top: 18px;
-        }
+        .main { display: grid; grid-template-columns: 1fr 360px; gap: var(--gap); margin-top: 18px; }
 
-        /* Left column (content) */
         .card {
             background: var(--card);
             border-radius: 10px;
@@ -127,30 +84,11 @@
             box-shadow: 0 6px 20px rgba(15,20,36,0.04);
             border: 1px solid rgba(15,20,36,0.03);
         }
-        h2 {
-            margin: 0 0 12px 0;
-            font-size: 16px;
-            color: var(--accent);
-            letter-spacing: -0.2px;
-        }
+        h2 { margin: 0 0 12px 0; font-size: 16px; color: var(--accent); }
         p, li { color: #213244; font-size: 15px; margin: 0; }
+        ul { padding-left: 20px; }
 
-        .muted { color: var(--muted); font-size: 14px; }
-
-        .about p + p { margin-top: 10px; }
-
-        /* Experience / Education lists */
-        .list { display: flex; flex-direction: column; gap: 12px; }
-        .item {
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .item-left { min-width: 0; }
-        .role { font-weight: 700; color: #0f1724; }
-        .meta { color: var(--muted); font-size: 13px; margin-top: 6px; }
-
+        /* Skills as badges */
         .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
         .skill {
             background: rgba(30,91,187,0.08);
@@ -161,144 +99,102 @@
             font-size:13px;
         }
 
-        /* Right column (sidebar) */
-        .sidebar .card { margin-bottom: var(--gap); }
-        .section-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-        .download {
-            background: var(--primary);
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-        }
-        .download:hover { background: var(--accent); }
-
-        ul.plain { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
-        ul.plain li { display:block; color: #213244; }
-
         .hobbies { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
         .hobby { background: #f1f6ff; padding:8px 10px; border-radius:8px; font-weight:600; color: #183e75; font-size:13px; }
 
-        /* Responsive */
         @media (max-width: 980px) {
             .main { grid-template-columns: 1fr; }
-            .contact { gap: 8px; }
-            .photo { width: 110px; height: 110px; flex: 0 0 110px; }
+            .photo { width: 110px; height: 110px; }
         }
     </style>
 </head>
 <body>
-    <div class="container" role="main" aria-labelledby="name-heading">
-        <header class="header" role="banner">
-            <div class="photo" aria-hidden="false">
-                <!-- Replace the image src with your photo -->
+    <div class="container">
+        <header class="header">
+            <div class="photo">
                 <img src="background-replacer-result.png" alt="Portrait of Gidon Peeper">
             </div>
-
             <div class="hero">
-                <h1 id="name-heading" class="name">Gidon Peeper</h1>
-                <div class="title">MSc Artificial Intelligence — Student Researcher, Hasson Lab (Princeton)</div>
-                <p class="summary">I develop and apply computational methods at the intersection of large language models and human neuroscience. My work focuses on how language is processed and represented in the human brain using naturalistic electrocorticography (ECoG) data.</p>
-
-                <div class="contact" aria-label="contact information">
+                <h1 class="name">Gidon Peeper</h1>
+                <div class="title">MSc Artificial Intelligence Student — Student Researcher, Hasson Lab (Princeton)</div>
+                <div class="contact">
                     <div class="item">📍 Amsterdam, The Netherlands</div>
-                    <a class="item" href="mailto:gidonpeeper@gmail.com" title="Email">✉️ gidonpeeper@gmail.com</a>
-                    <a class="item" href="https://www.linkedin.com/in/gidonpeeper" target="_blank" rel="noopener">🔗 LinkedIn</a>
-                    <a class="download" href="#" title="Download CV (replace link)">Download CV</a>
+                    <a href="mailto:gidonpeeper@gmail.com">✉️ gidonpeeper@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/gidonpeeper" target="_blank" rel="noopener">🔗 LinkedIn</a>
                 </div>
             </div>
         </header>
 
         <div class="main">
             <!-- Left column -->
-            <section class="card" aria-labelledby="about-heading">
-                <h2 id="about-heading">About</h2>
-                <div class="about">
-                    <p>I am a highly ambitious student with a passion for leveraging Artificial Intelligence to make a significant impact on the world. Being a critical thinker, I do not shy away from sharing my thoughts and perspectives. I strive to maintain a logical and analytical approach to decision-making, both in academic endeavors and in everyday life.</p> <p>On the other hand, I am a caring person who wants to make the most of every situation. I am not hesitant to step up and take initiative, and I am always looking for ways to positively influence my life, and that of others. I enjoy using AI as a tool for innovation to enhance well-being and address social challenges. I am eager to learn more, so I can contribute more.</p></p>
-
-                    <p><strong>Current research (since September 2025):</strong> Student researcher at the <em>Hasson Lab, Princeton University — Neuroscience</em>. I work with naturalistic ECoG datasets and leverage large language models to investigate how linguistic information is represented and transformed in the human cortex. My research blends signal processing, representational analyses, and LLM-based feature extraction to study real-world language processing.</p>
-                </div>
+            <section class="card">
+                <h2>About Me</h2>
+                <p>I am a highly ambitious student with a passion for leveraging Artificial Intelligence to make a significant impact on the world. Being a critical thinker, I do not shy away from sharing my thoughts and perspectives. I strive to maintain a logical and analytical approach to decision-making, both in academic endeavors and in everyday life.</p>
+                <p>On the other hand, I am a caring person who wants to make the most of every situation. I am not hesitant to step up and take initiative, and I am always looking for ways to positively influence my life, and that of others. I enjoy using AI as a tool for innovation to enhance well-being and address social challenges. I am eager to learn more, so I can contribute more.</p>
+                <p><strong>Since September 2025:</strong> I am a student researcher at the <em>Hasson Lab, Neuroscience Faculty, Princeton University</em>, where I develop and apply computational methods at the intersection of large language models and human neuroscience. My work focuses on how language is processed and represented in the human brain using naturalistic electrocorticography (ECoG) data..</p>
             </section>
 
-            <!-- Right column (sidebar) -->
+            <!-- Right column -->
             <aside class="sidebar">
-                <div class="card" aria-labelledby="quick-facts">
-                    <div class="section-heading">
-                        <h2 id="quick-facts">Quick Facts</h2>
-                    </div>
-                    <ul class="plain" aria-hidden="false">
-                        <li><strong>Education:</strong> MSc Artificial Intelligence — University of Amsterdam (2023–2026 expected)</li>
-                        <li><strong>BSc:</strong> Artificial Intelligence & Psychobiology — University of Amsterdam (2020–2023)</li>
-                        <li class="muted">Languages: English, Dutch</li>
-                    </ul>
-                </div>
-
-                <div class="card" aria-labelledby="skills-heading">
-                    <div class="section-heading">
-                        <h2 id="skills-heading">Technical Skills</h2>
-                    </div>
-
-                    <div class="skills" role="list">
-                        <div class="skill">Calculus, linear algebra, logic</div>
-                        <div class="skill">Data analysis & visualization</div>
-                        <div class="skill">Git · Jupyter</div>
-                        <div class="skill">Neural signal processing</div>
-                        <div class="skill">NLP / LLMs</div>
-                        <div class="skill">Python</div>
+                <div class="card">
+                    <h2>Technical Skills</h2>
+                    <div class="skills">
+                        <div class="skill">Data processing, analysis & visualization</div>
+                        <div class="skill">Deep/Machine/Reinforcement Learning</div>
+                        <div class="skill">Neural Signal Processing</div>
+                        <div class="skill">NLP/LLMs</div>
                     </div>
                 </div>
 
-                <div class="card" aria-labelledby="hobbies-heading">
-                    <div class="section-heading">
-                        <h2 id="hobbies-heading">Hobbies</h2>
-                    </div>
-                    <div class="hobbies" role="list">
+                <div class="card">
+                    <h2>Hobbies</h2>
+                    <div class="hobbies">
                         <div class="hobby">Piano</div>
+                        <div class="hobby">Gym</div>
+                        <div class="hobby">Field Hockey</div>
+                        <div class="hobby">Football</div>
                         <div class="hobby">Running</div>
-                        <div class="hobby">Field hockey</div>
                         <div class="hobby">Skiing</div>
+                        <div class="hobby">Ice Speedskating</div>
                         <div class="hobby">Tennis</div>
                     </div>
                 </div>
             </aside>
-
-            <!-- Full-width content below (Education / Experience / Projects / Activities) -->
-            <section class="card" aria-labelledby="education-heading">
-                <h2 id="education-heading">Education & Academic Highlights</h2>
-
-                <div class="list" style="margin-top:12px;">
-                    <div class="item">
-                        <div class="item-left">
-                            <div class="role">MSc. Artificial Intelligence — University of Amsterdam</div>
-                            <div class="meta">2023 — 2026 (expected)</div>
-                        </div>
-                        <div class="meta muted">Relevant coursework: Machine Learning, Deep Learning, NLP</div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-left">
-                            <div class="role">BSc. Artificial Intelligence & Psychobiology — University of Amsterdam</div>
-                            <div class="meta">2020 — 2023 (with Honors)</div>
-                        </div>
-                        <div class="meta muted">Bachelor project: Social robots supporting students — manuscript under review</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="card" aria-labelledby="achievements-heading">
-                <h2 id="achievements-heading">Achievements & Activities</h2>
-                <ul style="margin-top:12px;">
-                    <li style="margin-bottom:10px;"><strong>ETMAAL 2024:</strong> Presented findings (poster).</li>
-                    <li style="margin-bottom:10px;"><strong>International Science Summer Institute:</strong> Participant at Weizmann Institute (2020).</li>
-                    <li style="margin-bottom:10px;"><strong>Leadership:</strong> President, Dutch-Jewish Student Council (NJSO) (2024—present).</li>
-                    <li style="margin-bottom:10px;"><strong>Teaching & Volunteering:</strong> High-school teaching, shadowing, Taglit Birthright volunteer.</li>
-                </ul>
-            </section>
-
-        
         </div>
+
+        <section class="card" style="margin-top:20px;">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>MSc. Artificial Intelligence</strong>, University of Amsterdam (2023 - 2026, expected)</li>
+                <li><strong>BSc. Artificial Intelligence</strong>, VU University Amsterdam (2020 - 2023, with Honors)</li>
+                <li><strong>BSc. Psychobiology</strong>, University of Amsterdam (2019 - 2023)</li>
+                <li><strong>High School Diploma</strong>, Vossius Gymnasium (2014 - 2019)</li>
+            </ul>
+        </section>
+
+        <section class="card" style="margin-top:20px;">
+            <h2>Academic Achievements</h2>
+            <ul>
+                <li><strong>Bachelor Project:</strong> "Examining the Merit of Social Robots in Supporting Students with Mood Problems" (Manuscript under review at the Journal of Technology in Behavioral Science)</li>
+                <li>Findings were presented at ETMAAL 2024 <a href="Peeper_Konijn-etal_2024_ETMAAL_Robots-Therapy_Poster-Wide.pdf" target="_blank">View ETMAAL 2024 Poster</a></li>
+                <li>Participant of International Science Summer Institute at the Weizmann Institute (2020)</li>
+            </ul>
+        </section>
+
+        <section class="card" style="margin-top:20px;">
+            <h2>Extracurricular Activities</h2>
+            <ul>
+                <li>President and founder of the Dutch Student Association Princeton (2025-Current)</li>
+                <li>President of the Dutch-Jewish Student Council (NJSO) (2024-2025)</li>
+                <li>High school teacher (Dutch, Maths at Maimonides) (2022-2024)</li>
+                <li>Shadow teacher/paraprofessional; Social and educational support for a 14-15 y/o boy with autism (2022-2024)</li>
+                <li>Volunteer at Taglit Birthright Onward in Israel (2023-2024)</li>
+                <li>Masterclass Communication & Media at Castro Communicatie (2023)</li>
+                <li>Private tutoring and institutional tutoring (2016-2023)</li>
+                <li>Field hockey referee (2017-2022)</li>
+                <li>Ice speed skating instructor (2015-2018)</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
