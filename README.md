@@ -1,2 +1,2 @@
-# GidonP.github.io
+# GidonPeeper.github.io
 Personal page of Gidon Peeper
