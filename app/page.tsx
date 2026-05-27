@@ -317,11 +317,11 @@ export default function Home() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {[
-            "Deep / Machine / Reinforcement Learning",
-            "NLP & Large Language Models",
-            "Neural Signal Processing",
+            "Agentic AI",
             "Data Processing, Analysis & Visualization",
-            "Agentic AI"
+            "Deep / Machine / Reinforcement Learning",
+            "Neural Signal Processing",
+            "NLP & Large Language Models"
           ].map((skill) => (
             <div
               key={skill}
