@@ -81,6 +81,15 @@ export default function Home() {
             neural recordings and computational language models, with an emphasis
             on designing and evaluating meaningful ways to represent linguistic
             features.
+            We are currently preparing a manuscript, but a sneak peek of some of our preliminary results can be found in{" "}
+            <a
+              href="/ccn-abstract-formatting.pdf"
+              target="_blank"
+              className="text-blue-700 hover:underline"
+            >
+              this CCN extended abstract
+            </a>
+            .
           </p>
 
           
@@ -153,7 +162,7 @@ export default function Home() {
                   Bachelor thesis project conducted at VU University Amsterdam and
                   the University of Amsterdam, examining the role of social robots
                   in supporting students with mood problems. Manuscript currently
-                  under review at the Journal of Technology in Behavioral Science.
+                  under review at the International Journal of Social Robotics (SORO).
                 </p>
 
                 <a
