@@ -321,6 +321,7 @@ export default function Home() {
             "NLP & Large Language Models",
             "Neural Signal Processing",
             "Data Processing, Analysis & Visualization",
+            "Agentic AI"
           ].map((skill) => (
             <div
               key={skill}
