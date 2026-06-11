@@ -28,7 +28,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/cv.pdf"
+                href="/resume.pdf"
                 className="rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition hover:bg-blue-800"
               >
                 Download CV
