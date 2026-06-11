@@ -7,7 +7,7 @@ export default function Home() {
 
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-blue-700">
-              AI & Neuroscience Researcher
+              AI and Neuroscience Researcher & Engineer
             </p>
 
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
@@ -15,10 +15,17 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              MSc Artificial Intelligence student at the University of Amsterdam,
-              currently conducting research at Princeton University's Hasson Lab.
-              My work focuses on computational neuroscience, natural language
-              processing, and interpretable machine learning.
+              I am motivated to use AI not just for the sake of using it, but by
+              balancing stochasticity for optimization and efficiency with
+              determinism for interpretable outcomes. Leveraging the theoretical
+              foundation from my coursework, I have experience developing and
+              integrating (agentic) AI for and into my research and work.
+              Furthermore, I enjoy analyzing complex problems from multiple
+              perspectives, which, along with my experience as a teacher and
+              leader of student initiatives, helps me communicate outcomes with
+              stakeholders from different backgrounds. I am excited to join an
+              ambitious, curious, intellectually driven team whose feedback
+              challenges me to think more critically and execute at a high bar.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -56,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research */}
+      {/* Current Research */}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-3xl font-bold tracking-tight">
           Current Research
@@ -74,42 +81,151 @@ export default function Home() {
             </a>
           </h3>
 
+          <p className="mt-1 text-sm text-slate-500">
+            Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
+          </p>
+
           <p className="mt-4 leading-8 text-slate-600">
-            Conducting research at the intersection of artificial intelligence,
-            neuroscience, and language. My work focuses on how naturalistic
-            language is processed and represented in the human brain using ECoG
-            neural recordings and computational language models, with an emphasis
-            on designing and evaluating meaningful ways to represent linguistic
-            features.
-            We are currently preparing a manuscript, but a sneak peek of some of our preliminary results can be found in{" "}
+            Leveraging AI and LLMs to enhance our understanding of how the brain
+            processes and represents naturalistic language, with an emphasis on
+            designing and evaluating meaningful ways to represent linguistic
+            features. We have two papers at CCN 2026 — see the{" "}
             <a
               href="/ccn-abstract-formatting.pdf"
               target="_blank"
               className="text-blue-700 hover:underline"
             >
-              this CCN extended abstract
-            </a>
-            .
+              CCN extended abstract
+            </a>{" "}
+            and the Publications section below.
           </p>
+        </div>
+      </section>
 
-          
+      {/* Publications */}
+      <section className="mx-auto max-w-5xl px-6 py-16">
+        <h2 className="text-3xl font-bold tracking-tight">Publications</h2>
+
+        <div className="mt-8 space-y-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+              CCN 2026
+            </p>
+            <h3 className="mt-2 text-lg font-semibold leading-snug">
+              Prospective Planning and Retrospective Integration: Distinct Neural
+              Signatures of Future and Past in Naturalistic Conversations
+            </h3>
+            <p className="mt-2 text-sm text-slate-500">
+              I. Jalon, G. Peeper, H. Wang, Z. Zada, B. Aubrey, A. Bhattacharjee,
+              S. Nastase, A. Goldstein, O. Devinsky, A. Flinker, and U. Hasson
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              9th Annual Conference on Cognitive Computational Neuroscience · 2026
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+              Under Review · NeurIPS 2026
+            </p>
+            <h3 className="mt-2 text-lg font-semibold leading-snug">
+              NeuroCast: Neural Decoding Benchmarks for Naturalistic Speech in
+              Human ECoG
+            </h3>
+            <p className="mt-2 text-sm text-slate-500">
+              Z. Paris, A. Bhattacharjee, A. L. Lee, J. Han, D. D. Han, G. Peeper,
+              S. S. Z. Yang, L. Niekerken, Z. Zada, P. S. Scotti, J. Cha, U. Hasson,
+              and I. Jalon
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              Manuscript under review · NeurIPS 2026
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+              CCN 2026
+            </p>
+            <h3 className="mt-2 text-lg font-semibold leading-snug">
+              Distributed Sensitivity to Semantics and Structure Across the Brain
+              During Naturalistic Conversations
+            </h3>
+            <p className="mt-2 text-sm text-slate-500">
+              G. Peeper, I. Jalon, H. Wang, Z. Zada, B. Aubrey, A. Bhattacharjee,
+              S. Nastase, A. Goldstein, O. Devinsky, A. Flinker, and U. Hasson
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              9th Annual Conference on Cognitive Computational Neuroscience · 2026
+            </p>
+            <a
+              href="/ccn-abstract-formatting.pdf"
+              target="_blank"
+              className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline"
+            >
+              View extended abstract →
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+              Under Review · SORO
+            </p>
+            <h3 className="mt-2 text-lg font-semibold leading-snug">
+              Examining the Potential of Social Robots to Increase Adherence in
+              Internet-based CBT
+            </h3>
+            <p className="mt-2 text-sm text-slate-500">
+              E. A. Konijn, G. Peeper, T. Portegies, N. Garnefski, V. Kraaij, and
+              S. Struijs
+            </p>
+            <p className="mt-1 text-sm text-slate-400">
+              Manuscript under review · International Journal of Social Robotics · 2024
+            </p>
+            <a
+              href="/poster.pdf"
+              target="_blank"
+              className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline"
+            >
+              View ETMAAL 2024 Poster →
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Experience */}
-      
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-3xl font-bold tracking-tight">Experience</h2>
-        
+
         <h3 className="mt-10 text-2xl font-semibold tracking-tight">
-          Academic Experience
+          Research & Industry
         </h3>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <div className="mt-6 space-y-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="flex flex-col justify-between gap-2 md:flex-row">
               <div>
                 <h3 className="text-xl font-semibold">
-                  Research Intern — Princeton University
+                  External AI Consultant & Engineer — Ayrshare
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-600">
+                  Designing and implementing a multi-modal classification, RAG, and
+                  recommendation pipeline. Working with the existing data warehouse,
+                  codebase, and MCP server.
+                </p>
+              </div>
+
+              <p className="whitespace-nowrap font-medium text-slate-500">
+                2026–Present
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Research Intern & Assistant — Princeton University
                 </h3>
 
                 <p className="mt-2 text-slate-600">
@@ -129,23 +245,22 @@ export default function Home() {
               </p>
             </div>
           </div>
-        
-        <div className="mt-8 space-y-6">
+
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="flex flex-col justify-between gap-2 md:flex-row">
               <div>
                 <h3 className="text-xl font-semibold">
-                  Research Internship — Cognitive AI Lab, University of Amsterdam
+                  Summer Research Intern — Cognitive AI Lab, University of Amsterdam
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  Conducted research on causal probing of large language models,
-                  critically evaluating concept erasure methods for linguistic
-                  interpretability and computational neuroscience applications.
+                  Designed and evaluated LLM vector representations of linguistic
+                  features for interpretability and computational neuroscience
+                  applications.
                 </p>
               </div>
 
-              <p className="font-medium text-slate-500">
+              <p className="whitespace-nowrap font-medium text-slate-500">
                 2025
               </p>
             </div>
@@ -155,27 +270,20 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-2 md:flex-row">
               <div>
                 <h3 className="text-xl font-semibold">
-                  Social Robots & Student Mental Health
+                  Researcher & Coordinator — Social Robots & Student Mental Health
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  Bachelor thesis project conducted at VU University Amsterdam and
-                  the University of Amsterdam, examining the role of social robots
-                  in supporting students with mood problems. Manuscript currently
-                  under review at the International Journal of Social Robotics (SORO).
+                  Programmed humanoid robots to function as mental-health therapists.
+                  Designed a study in collaboration with clinical therapists to compare
+                  efficacy, alliance, and adherence to a screen-based control. Conducted
+                  at VU University Amsterdam, Leiden University, and the University of
+                  Amsterdam.
                 </p>
-
-                <a
-                  href="/poster.pdf"
-                  target="_blank"
-                  className="mt-4 inline-block text-sm font-medium text-blue-700 hover:underline"
-                >
-                  View ETMAAL 2024 Poster →
-                </a>
               </div>
 
               <p className="whitespace-nowrap font-medium text-slate-500">
-                2023–2024
+                2023
               </p>
             </div>
           </div>
@@ -185,91 +293,78 @@ export default function Home() {
           Leadership & Teaching
         </h3>
 
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <div className="flex flex-col justify-between gap-2 md:flex-row">
-            <div>
-              <h3 className="text-xl font-semibold">
-                Co-Founder & President - Dutch Student Association Princeton
-              </h3>
+        <div className="mt-6 space-y-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Co-Founder & President — Dutch Student Association Princeton
+                </h3>
+              </div>
 
-              
+              <p className="whitespace-nowrap font-medium text-slate-500">
+                2025–2026
+              </p>
             </div>
-
-            <p className="whitespace-nowrap font-medium text-slate-500">
-              2025–2026
-            </p>
           </div>
-        </div>
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <div className="flex flex-col justify-between gap-2 md:flex-row">
-            <div>
-              <h3 className="text-xl font-semibold">
-                Co-Founder & President — Dutch-Jewish Student Council (NJSO)
-              </h3>
 
-              <p className="mt-4 leading-7 text-slate-600">
-                Co-founded a national council representing Jewish students at
-                Dutch universities. Defined the mission and vision of the
-                organization and co-authored its statutes together with legal
-                experts and senior community advisors.
-              </p>
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  President — Dutch National Student Council
+                </h3>
 
-              <p className="mt-4 leading-7 text-slate-600">
-                Built and led a nationwide student board with the goal of
-                promoting a university climate in which students feel welcome,
-                respected, and safe. Met with university presidents, members of
-                parliament, and the Dutch Minister of Education to discuss issues
-                relating to antisemitism and student safety.
-              </p>
+                <p className="mt-4 leading-7 text-slate-600">
+                  Co-founded a national council representing students across all Dutch
+                  universities; defined its mission, drafted statutes with legal experts,
+                  and assembled and led a nationwide board. Engaged with senior university
+                  leaders and national policymakers, including the Minister of Education,
+                  supported parliamentary policy-making efforts, and gave media interviews.
+                </p>
+              </div>
 
-              <p className="mt-4 leading-7 text-slate-600">
-                Participated in the national taskforce combatting antisemitism
-                and gave anonymous interviews to Dutch media outlets for safety
-                reasons.
+              <p className="whitespace-nowrap font-medium text-slate-500">
+                2024–2025
               </p>
             </div>
-
-            <p className="whitespace-nowrap font-medium text-slate-500">
-              2024–2025
-            </p>
           </div>
-        </div>
 
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <div className="flex flex-col justify-between gap-2 md:flex-row">
-            <div>
-              <h3 className="text-xl font-semibold">
-                High School Teacher — JSG Maimonides
-              </h3>
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  High School Teacher — JSG Maimonides
+                </h3>
 
-              <p className="mt-4 leading-7 text-slate-600">
-                Taught mathematics, Dutch, and English as a second language to
-                9th and 10th grade students.
+                <p className="mt-4 leading-7 text-slate-600">
+                  Taught mathematics, Dutch, and English as a second language to
+                  9th and 10th grade students.
+                </p>
+              </div>
+
+              <p className="whitespace-nowrap font-medium text-slate-500">
+                2022–2024
               </p>
             </div>
-
-            <p className="whitespace-nowrap font-medium text-slate-500">
-              2022–2024
-            </p>
           </div>
-        </div>
 
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <div className="flex flex-col justify-between gap-2 md:flex-row">
-            <div>
-              <h3 className="text-xl font-semibold">
-                Shadow Teacher / Paraprofessional
-              </h3>
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Shadow Teacher / Paraprofessional
+                </h3>
 
-              <p className="mt-4 leading-7 text-slate-600">
-                Provided social and educational support for a student with
-                autism.
+                <p className="mt-4 leading-7 text-slate-600">
+                  Provided social and educational support for a student with autism.
+                </p>
+              </div>
+
+              <p className="whitespace-nowrap font-medium text-slate-500">
+                2022–2024
               </p>
             </div>
-
-            <p className="whitespace-nowrap font-medium text-slate-500">
-              2022–2024
-            </p>
           </div>
         </div>
       </section>
@@ -285,27 +380,34 @@ export default function Home() {
             </h3>
 
             <p className="mt-2 text-slate-600">
-              University of Amsterdam · Current
+              University of Amsterdam · 2023–2026
+            </p>
+
+            <p className="mt-3 leading-7 text-slate-600">
+              Relevant coursework: Machine, Deep & Reinforcement Learning,
+              Information Retrieval, Interpretability/XAI, Natural Language
+              Processing. AI Entrepreneurship: co-developed an AI-driven MVP
+              with pharmacies to combat polypharmacy.
             </p>
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h3 className="text-xl font-semibold">
-              BSc Artificial Intelligence
+              BSc Artificial Intelligence — With Honors
             </h3>
 
             <p className="mt-2 text-slate-600">
-              VU University Amsterdam · Honors
+              VU University Amsterdam · 2020–2023 · Minor Entrepreneurship
             </p>
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h3 className="text-xl font-semibold">
-              BSc Psychobiology 
+              BSc Psychobiology
             </h3>
 
             <p className="mt-2 text-slate-600">
-              University of Amsterdam · Minor Entrepreneurship
+              University of Amsterdam · 2019–2023
             </p>
           </div>
         </div>
@@ -321,7 +423,7 @@ export default function Home() {
             "Data Processing, Analysis & Visualization",
             "Deep / Machine / Reinforcement Learning",
             "Neural Signal Processing",
-            "NLP & Large Language Models"
+            "NLP & Large Language Models",
           ].map((skill) => (
             <div
               key={skill}
@@ -335,17 +437,16 @@ export default function Home() {
 
       {/* Hobbies */}
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-3xl font-bold tracking-tight">
-          Hobbies 
-        </h2>
+        <h2 className="text-3xl font-bold tracking-tight">Hobbies</h2>
 
         <div className="mt-8 flex flex-wrap gap-3">
           {[
             "Piano",
-            "Football - Princeton University Club Soccer",
+            "Field Hockey",
+            "Football – Princeton University Club Soccer",
             "Gym",
             "Ice Speedskating",
-            "Running - Princeton & Brooklyn Half Marathons",
+            "Running – 4× Half Marathon",
             "Skiing",
             "Snowboarding",
             "Swimming",
@@ -364,9 +465,7 @@ export default function Home() {
       {/* Contact */}
       <section className="mx-auto max-w-5xl px-6 py-24">
         <div className="rounded-3xl bg-slate-900 px-8 py-16 text-white">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Contact
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight">Contact</h2>
 
           <p className="mt-4 max-w-2xl text-slate-300">
             Feel free to reach out regarding research opportunities,
