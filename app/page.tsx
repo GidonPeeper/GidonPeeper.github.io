@@ -23,9 +23,7 @@ export default function Home() {
               Furthermore, I enjoy analyzing complex problems from multiple
               perspectives, which, along with my experience as a teacher and
               leader of student initiatives, helps me communicate outcomes with
-              stakeholders from different backgrounds. I am excited to join an
-              ambitious, curious, intellectually driven team whose feedback
-              challenges me to think more critically and execute at a high bar.
+              stakeholders from different backgrounds.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
