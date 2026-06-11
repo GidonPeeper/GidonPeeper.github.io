@@ -61,42 +61,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Current Research */}
+      {/* Current Work */}
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-3xl font-bold tracking-tight">
-          Current Research
-        </h2>
+        <h2 className="text-3xl font-bold tracking-tight">Current Work</h2>
 
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">
-            Research Intern & Assistant — Princeton University,{" "}
-            <a
-              href="https://hassonlab.princeton.edu"
-              target="_blank"
-              className="text-blue-700 hover:underline"
-            >
-              Hasson Lab
-            </a>
-          </h3>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+              2026–Present
+            </p>
+            <h3 className="mt-2 text-xl font-semibold">
+              External AI Consultant & Engineer
+            </h3>
+            <p className="mt-1 text-slate-500">Ayrshare</p>
+            <p className="mt-4 leading-7 text-slate-600">
+              Designing and implementing a multi-modal classification, RAG, and
+              recommendation pipeline. Working with the existing data warehouse,
+              codebase, and MCP server.
+            </p>
+          </div>
 
-          <p className="mt-1 text-sm text-slate-500">
-            Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
-          </p>
-
-          <p className="mt-4 leading-8 text-slate-600">
-            Leveraging AI and LLMs to enhance our understanding of how the brain
-            processes and represents naturalistic language, with an emphasis on
-            designing and evaluating meaningful ways to represent linguistic
-            features. We have two papers at CCN 2026 — see the{" "}
-            <a
-              href="/ccn-abstract-formatting.pdf"
-              target="_blank"
-              className="text-blue-700 hover:underline"
-            >
-              CCN extended abstract
-            </a>{" "}
-            and the Publications section below.
-          </p>
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+              2025–Present
+            </p>
+            <h3 className="mt-2 text-xl font-semibold">
+              Research Intern & Assistant
+            </h3>
+            <p className="mt-1 text-slate-500">
+              Princeton University,{" "}
+              <a
+                href="https://hassonlab.princeton.edu"
+                target="_blank"
+                className="text-blue-700 hover:underline"
+              >
+                Hasson Lab
+              </a>
+              {" "}· Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
+            </p>
+            <p className="mt-4 leading-7 text-slate-600">
+              Leveraging AI and LLMs to enhance our understanding of how the
+              brain processes and represents naturalistic language, with an
+              emphasis on designing and evaluating meaningful ways to represent
+              linguistic features. See the CCN extended abstracts in the
+              Publications section for a sneak peek.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -201,18 +211,9 @@ export default function Home() {
         <div className="mt-6 space-y-6">
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="flex flex-col justify-between gap-2 md:flex-row">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  External AI Consultant & Engineer — Ayrshare
-                </h3>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  Designing and implementing a multi-modal classification, RAG, and
-                  recommendation pipeline. Working with the existing data warehouse,
-                  codebase, and MCP server.
-                </p>
-              </div>
-
+              <h3 className="text-xl font-semibold">
+                External AI Consultant & Engineer — Ayrshare
+              </h3>
               <p className="whitespace-nowrap font-medium text-slate-500">
                 2026–Present
               </p>
@@ -225,8 +226,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold">
                   Research Intern & Assistant — Princeton University
                 </h3>
-
-                <p className="mt-2 text-slate-600">
+                <p className="mt-1 text-slate-600">
                   <a
                     href="https://hassonlab.princeton.edu"
                     target="_blank"
@@ -237,7 +237,6 @@ export default function Home() {
                   · Neuroscience
                 </p>
               </div>
-
               <p className="whitespace-nowrap font-medium text-slate-500">
                 2025–Present
               </p>
