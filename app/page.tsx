@@ -166,7 +166,7 @@ export default function Home() {
               9th Annual Conference on Cognitive Computational Neuroscience · 2026
             </p>
             <a
-              href="/ccn-abstract-formatting.pdf"
+              href="/distributed-sensitivity.pdf"
               target="_blank"
               className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline"
             >
