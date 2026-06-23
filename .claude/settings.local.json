@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext *)",
+      "Bash(brew install *)",
+      "Bash(python3 *)",
+      "Bash(chromium-cli *)",
+      "Bash(node *)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --screenshot=/tmp/gidon-site-hero.png --window-size=1280,900 --no-sandbox http://localhost:3000)",
+      "Bash(echo \"exit: $?\")",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --screenshot=/tmp/gidon-site-pubs.png --window-size=1280,900 --no-sandbox --virtual-time-budget=3000 'http://localhost:3000/#publications')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --screenshot=/tmp/gidon-site-full.png --window-size=1280,6000 --no-sandbox http://localhost:3000)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome *)"
+    ]
+  }
+}

@@ -28,7 +28,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/resume.pdf"
+                href="/Resume Gidon Peeper.pdf"
                 className="rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition hover:bg-blue-800"
               >
                 Download CV
@@ -100,11 +100,11 @@ export default function Home() {
               {" "}· Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
             </p>
             <p className="mt-4 leading-7 text-slate-600">
-              Leveraging AI and LLMs to enhance our understanding of how the
+              Using Machine Learning to enhance our understanding of how the
               brain processes and represents naturalistic language, with an
               emphasis on designing and evaluating meaningful ways to represent
-              linguistic features. See the CCN extended abstracts in the
-              Publications section for a sneak peek.
+              linguistic features. Included working with and integrating new pipelines and features into existing code-base (mostly Python).
+              See the CCN extended abstracts in the Publications section for a sneak peek.
             </p>
           </div>
         </div>
