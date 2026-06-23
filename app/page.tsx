@@ -176,7 +176,7 @@ export default function Home() {
 
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
-              Under Review · SORO
+              Manuscript accepted · SORO
             </p>
             <h3 className="mt-2 text-lg font-semibold leading-snug">
               Examining the Potential of Social Robots to Increase Adherence in
