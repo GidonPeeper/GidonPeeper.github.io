@@ -1,0 +1,273 @@
+% Resume of Gidon Peeper
+% ---------------------------------------------------------------------------
+% Source reconstructed from the compiled resume.pdf (pdfTeX, TeX Live 2025).
+% Fonts: Bitstream Charter (T1) via the `charter' package; math bullets from CM.
+% Layout: 10pt article; body text is \footnotesize (8pt/9.5pt), small text is
+% \scriptsize (7pt/8pt). The left sidebar is drawn on the shipout background
+% so that the main column is ordinary LaTeX flow.
+%
+% Build:  tectonic resume.tex      (or: pdflatex resume.tex, run twice)
+% ---------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage[a4paper,
+            left=7.54cm, textwidth=12.46cm,   % main column: 12.46cm, 1cm right margin
+            top=27.435pt, bottom=0.8cm,       % first baseline = top + \topskip
+            nohead, nofoot]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\topskip}{30pt}          % name baseline sits exactly at top + 30pt
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% --- colours ---------------------------------------------------------------
+\definecolor{sidebg}{HTML}{5C6E7F}      % sidebar background
+\definecolor{sidetext}{HTML}{ECECEC}    % sidebar body text
+\definecolor{siderule}{HTML}{AEB6BF}    % sidebar section rules
+\definecolor{heading}{HTML}{2C3E50}     % name, main section headings, main rules
+\definecolor{accent}{HTML}{34495E}      % institutions, dates, venues, bullets
+\definecolor{maintext}{HTML}{1A1A1A}    % main body text
+
+% --- sidebar geometry --------------------------------------------------------
+\newlength{\sidebarwidth}\setlength{\sidebarwidth}{6.9cm}
+\newlength{\sidebarleft}\setlength{\sidebarleft}{0.8cm}
+\newlength{\sidebartext}\setlength{\sidebartext}{5.34cm}
+\newlength{\sidebartop}\setlength{\sidebartop}{89.816pt} % baseline of first heading
+
+% --- vertical rhythm (fitted to the original) ---------------------------------
+\newlength{\sectionskip}\setlength{\sectionskip}{4.5pt}  % before a section heading (heading line has 12pt leading)
+\newlength{\ruleabove}\setlength{\ruleabove}{1.15pt}     % heading -> rule (rule is centred on its baseline)
+\newlength{\rulebelow}\setlength{\rulebelow}{3.35pt}     % rule -> content
+\newlength{\entryskip}\setlength{\entryskip}{4pt}        % before an entry
+\newlength{\nameskip}\setlength{\nameskip}{15.54pt}      % after the name
+
+% --- section heading with rule -------------------------------------------------
+% \cvsection*{...} omits the leading space (first heading in a column).
+% #2 heading colour, #3 rule colour, #4 title
+\NewDocumentCommand{\cvsection}{s m m m}{%
+  \IfBooleanF{#1}{\addvspace{\sectionskip}}%
+  {\normalsize\bfseries\leavevmode\color{#2}#4\par}%
+  \vspace{\ruleabove}%
+  \noindent\tikz[overlay]\draw[#3, line width=0.7pt] (0,0) -- (\linewidth,0);\par
+  \kern\rulebelow%
+}
+\NewDocumentCommand{\sidesection}{s m}{\IfBooleanTF{#1}{\cvsection*{white}{siderule}{#2}}{\cvsection{white}{siderule}{#2}}}
+\NewDocumentCommand{\mainsection}{s m}{\IfBooleanTF{#1}{\cvsection*{heading}{heading}{#2}}{\cvsection{heading}{heading}{#2}}}
+
+% --- entry: title, date, optional subtitle -----------------------------------------
+\newcommand{\cventry}[3]{%
+  \addvspace{\entryskip}%
+  \noindent{\bfseries\frenchspacing#1}\hfill{\scriptsize\itshape\color{accent}#2}%
+  \ifblank{#3}{}{\\{\color{accent}#3}}\par
+  \vspace{1pt}% 1pt before the description or bullet list that follows
+}
+
+% --- lists ---------------------------------------------------------------------------
+\newcommand{\cvbullet}{\fontsize{6}{6}\selectfont$\bullet$}
+\newenvironment{sideitems}{%
+  \begin{itemize}[label=\cvbullet, leftmargin=8.8pt, labelsep=4.25pt,
+                  topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=1pt]}
+  {\end{itemize}}
+\newenvironment{mainitems}{%
+  \begin{itemize}[label={\color{accent}\cvbullet}, leftmargin=9.6pt, labelsep=4.25pt,
+                  topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=0.5pt]}
+  {\end{itemize}}
+\newenvironment{publist}{%
+  \begin{itemize}[label={\color{accent}\cvbullet}, leftmargin=9.6pt, labelsep=4pt,
+                  topsep=4pt, partopsep=0pt, parsep=0pt, itemsep=4pt]}
+  {\end{itemize}}
+% \au{...} wraps one author name in a group.  The original did the same, which
+% suppresses the letter-comma kerns after names such as "Peeper," and "Aubrey,"
+% and therefore affects where the author lines break.
+\newcommand{\au}[1]{{#1}}
+% publication: title, authors, venue.  The publication block of the original
+% was set with \frenchspacing (uniform word spaces after periods, commas and
+% colons).  In the original the small-print block of the 1st and 4th entry
+% ends its paragraph *inside* the \scriptsize group (8pt leading), while the
+% 2nd and 3rd end it outside (9.5pt leading); the starred form reproduces
+% the latter.
+\NewDocumentCommand{\publication}{s m m m}{%
+  \item \frenchspacing{\bfseries#2}\par
+  \IfBooleanTF{#1}{{\scriptsize#3\\{\color{accent}#4}}\par}%
+                  {{\scriptsize#3\\{\color{accent}#4}\par}}%
+  \nonfrenchspacing}
+
+% --- sidebar content -----------------------------------------------------------------
+\newcommand{\sidebarcontent}{%
+  % \parbox implies \sloppy; the original sidebar was set \fussy (it has a few
+  % overfull lines), so restore normal tolerance to get identical line breaks.
+  \footnotesize\fussy\setlength{\parskip}{0pt}\setlength{\parindent}{0pt}%
+  \sidesection*{About me}
+  I am motivated to use AI not just for the sake of using it, but by balancing
+  the stochasticity for optimization and efficiency with determinism for
+  interpretable outcomes.\\ % forced break, as in the original
+  Leveraging the theoretical foundation from my
+  coursework, I have experience in developing and integrating (agentic) AI for,
+  and into my research and work. Furthermore, I enjoy analyzing complex problems
+  from multiple perspectives, which, along with my experience as a teacher and
+  leader of student initiatives, helps me communicate outcomes with stakeholders
+  from different backgrounds. I am excited to join an ambitious, curious,
+  intellectually driven team whose\\ % forced break, as in the original
+  feedback challenges me to think more critically and execute on a high level.\par
+
+  \sidesection{Details}
+  \begin{sideitems}
+    \item 06-06-2001
+    \item Princeton, New Jersey
+    \item +31 6 20982768
+    \item \href{mailto:gidonpeeper@gmail.com}{gidonpeeper@gmail.com}
+    \item \href{https://www.linkedin.com/in/gidonpeeper}{linkedin.com/in/gidonpeeper}
+    \item \href{https://gidonpeeper.github.io}{gidonpeeper.github.io}
+  \end{sideitems}
+
+  \sidesection{Technical skills}
+  \begin{sideitems}
+    \item Data processing, analysis and visualization
+    \item Deep, Machine and Reinforcement Learning
+    \item NLP/LLMs and Agentic AI
+  \end{sideitems}
+
+  \sidesection{Extracurricular activities}
+  \begin{sideitems}
+    \item Founder and President of the Dutch Student Association Princeton (2025 -- 2026)
+    \item Social and educational support for a 14--15 y/o neurodivergent student (2022 -- 2024)
+    \item Volunteer at Taglit Birthright Onward (2023 -- 2024)
+    \item Masterclass Communication and Media at Castro Communicatie (2023)
+    \item Football trainer/coach (2020 -- 2023)
+    \item Tutoring, privately and through institutions (2016 -- 2023
+    \item International Science Summer Institute, Weizmann Institute (2020)
+    \item Field hockey referee (2017 -- 2022)
+    \item Ice speedskating instructor (2015 -- 2018)
+  \end{sideitems}
+
+  \sidesection{Hobbies}
+  \begin{sideitems}
+    \item Piano
+    \item Gym
+    \item Field hockey
+    \item Football -- Princeton Club Soccer
+    \item Ice speedskating
+    \item Running -- 4x half marathon
+    \item Skiing
+    \item Snowboarding
+    \item Swimming
+    \item Tennis
+  \end{sideitems}
+}
+
+% Sidebar background and content are placed on the page background at shipout.
+\AddToHook{shipout/background}{%
+  \put(0,0){\color{sidebg}\rule[-\paperheight]{\sidebarwidth}{\paperheight}}%
+  \put(\sidebarleft,-\sidebartop){\color{sidetext}\parbox[t]{\sidebartext}{\sidebarcontent}}%
+}
+
+\begin{document}
+% The original main column was typeset inside a minipage, which implies
+% \sloppy; keep it so that line breaks come out identical.
+\footnotesize\sloppy\color{maintext}
+
+{\fontsize{25pt}{30pt}\selectfont\color{heading}GIDON \textbf{PEEPER}\par}
+\vspace{\nameskip}
+
+\mainsection{Experience}
+
+\cventry{External AI consultant and engineer}{2026 -- present}
+        {Ayrshare -- Unified Social Media API for Scalable Apps \& AI Agents}
+\begin{mainitems}
+  \item Designing and implementing multi-modal classification and RAG, and recommendation pipeline.
+  \item Working with existing data-warehouse, code-base and MCP-server.
+\end{mainitems}
+
+\cventry{Research intern and assistant}{2025 -- present}
+        {Princeton University, Hasson Lab (Neuroscience faculty)}
+\begin{mainitems}
+  \item Using Machine Learning to increase our understanding of how the brain processes and
+        represents naturalistic language, with an emphasis on designing and evaluating meaningful
+        ways to represent linguistic features.
+  \item Working with and integrating new pipelines and features into existing code-base (mostly Python).
+  \item Supervised by Prof.\ Uri Hasson and Dr.\ Itamar Jalon.
+\end{mainitems}
+
+\cventry{Summer research intern}{2025}
+        {Cognitive AI Lab, University of Amsterdam}
+\begin{mainitems}
+  \item Designing and evaluating LLM vector representations of linguistic features.
+  \item Supervised by Prof. Micha Heilbron.
+\end{mainitems}
+
+\cventry{President of a Dutch National Student Council}{2024 -- 2025}{}
+Co-founded a national council representing students across all Dutch universities; defined its
+mission, drafted statutes with legal experts, and assembled and led a nationwide board. Engaged
+with senior university leaders and national policymakers, including the Minister of Education,
+supported parliamentary policy-making efforts, and gave media interviews.
+
+\cventry{Researcher and coordinator}{2023}
+        {VU University Amsterdam, Leiden University, University of Amsterdam}
+Programmed humanoid robots to function as mental-health therapists. Designed study in
+collaboration with clinical therapists to compare efficacy, alliance and adherence to a
+screen-based control.
+
+\cventry{High school teacher --- JSG Maimonides}{2022 -- 2024}
+        {Mathematics, Dutch, and English (9th \& 10th grade)}
+
+\mainsection{Education}
+
+\cventry{MSc. Artificial Intelligence}{2023 -- 2026}
+        {University of Amsterdam (UvA)}
+\begin{mainitems}
+  \item Relevant coursework: Machine, Deep \& Reinforcement Learning, Information Retrieval,\\ % forced break, as in the original
+        Interpretability/XAI, Natural Language Processing.
+  \item AI Entrepreneurship: co-developed an AI-driven MVP with pharmacies to combat polypharmacy.
+  \item Scholarships: Bischoffsheim, H. Mullerfonds, R. Studiefondsen, St.\ Vreedefonds, JJSF, JJF.
+\end{mainitems}
+
+\cventry{BSc. Artificial Intelligence --- With Honors}{2020 -- 2023}
+        {VU University Amsterdam}
+Minor: Entrepreneurship at the University of Amsterdam.
+
+\cventry{BSc. Psychobiology}{2019 -- 2023}
+        {University of Amsterdam (UvA)}
+Additional honors courses; thesis in combination with Artificial Intelligence.
+
+\cventry{High School}{2014 -- 2019}
+        {Vossius Gymnasium}
+\begin{mainitems}
+  \item Profile: nature, health and technology, with Latin and economics.
+  \item Treasurer and vice-president of the Student Council; peer mentor for the first grade.
+  \item Thesis on Bitcoin and the Blockchain; extracurricular programming courses.
+\end{mainitems}
+
+\mainsection{Publications}
+
+\begin{publist}
+  \publication{``Prospective Planning and Retrospective Integration: Distinct Neural Signatures
+      of Future and Past in Naturalistic Conversations''}
+    {\au{I. Jalon}, \au{G. Peeper}, \au{H. Wang}, \au{Z. Zada}, \au{B. Aubrey}, \au{A.
+      Bhattacharjee}, \au{S. Nastase}, \au{A. Goldstein}, \au{O. Devinsky}, \au{A. Flinker},
+      and \au{U. Hasson}}
+    {9th Annual Conference on Cognitive Computational Neuroscience (CCN) \textit{-- 2026}}
+  \publication*{``Examining the Potential of Social Robots to Increase Adherence in Internet-based CBT''}
+    {\au{E. A. Konijn}, \au{G. Peeper}, \au{T. Portegies}, \au{N. Garnefski}, \au{V.
+      Kraaij}, and \au{S. Struijs}}
+    {Manuscript accepted, \textit{International Journal of Social Robotics} (SORO) -- 2026}
+  \publication*{``NeuroCast: Neural Decoding Benchmarks for Naturalistic Speech in Human ECoG''}
+    {\au{Z. Paris}, \au{A. Bhattacharjee}, \au{A. L. Lee}, \au{J. Han}, \au{D. D. Han},
+      \au{G. Peeper}, \au{S. S. Z. Yang}, \au{L. Niekerken}, \au{Z. Zada}, \au{P. S.
+      Scotti}, \au{J. Cha}, \au{U. Hasson}, and \au{I. Jalon}}
+    {Manuscript under review, \textit{NeurIPS} -- 2026}
+  \publication{``Distributed Sensitivity to Semantics and Structure Across the Brain During
+      Naturalistic Conversations''}
+    {\au{G. Peeper}, \au{I. Jalon}, \au{H. Wang}, \au{Z. Zada}, \au{B. Aubrey}, \au{A.
+      Bhattacharjee}, \au{S. Nastase}, \au{A. Goldstein}, \au{O. Devinsky}, \au{A. Flinker},
+      and \au{U. Hasson}}
+    {9th Annual Conference on Cognitive Computational Neuroscience (CCN) \textit{-- 2026}}
+\end{publist}
+
+\end{document}
