@@ -1,13 +1,15 @@
+const pill =
+  "rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 py-24">
         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
-
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-blue-700">
-              AI and Neuroscience Researcher & Engineer
+              AI Engineer & Researcher · London
             </p>
 
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
@@ -15,20 +17,25 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              I am motivated to use AI not just for the sake of using it, but by
-              balancing stochasticity for optimization and efficiency with
-              determinism for interpretable outcomes. Leveraging the theoretical
-              foundation from my coursework, I have experience developing and
-              integrating (agentic) AI for and into my research and work.
-              Furthermore, I enjoy analyzing complex problems from multiple
-              perspectives, which, along with my experience as a teacher and
-              leader of student initiatives, helps me communicate outcomes with
-              stakeholders from different backgrounds.
+              I am motivated to use AI not for its own sake, but where it earns
+              its place: balancing stochasticity for optimization and efficiency
+              with determinism for interpretable outcomes. I currently live in
+              London and work as an AI contractor for Ayrshare, where I own a
+              data and recommendation pipeline end to end. Before that, I spent
+              a year in Princeton’s Hasson Lab using language models to study
+              how the brain processes natural conversation.
+            </p>
+
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+              I enjoy analyzing complex problems from multiple perspectives, and
+              my experience as a teacher and in student leadership helps me
+              communicate outcomes to people from very different backgrounds.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/Resume Gidon Peeper.pdf"
+                href="/resume.pdf"
+                target="_blank"
                 className="rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition hover:bg-blue-800"
               >
                 Download CV
@@ -37,6 +44,7 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/gidonpeeper"
                 target="_blank"
+                rel="noreferrer"
                 className="rounded-xl border border-slate-300 px-5 py-3 font-medium text-slate-700 transition hover:bg-slate-100"
               >
                 LinkedIn
@@ -65,47 +73,63 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-3xl font-bold tracking-tight">Current Work</h2>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
-              2026–Present
-            </p>
-            <h3 className="mt-2 text-xl font-semibold">
-              External AI Consultant & Engineer
-            </h3>
-            <p className="mt-1 text-slate-500">Ayrshare</p>
-            <p className="mt-4 leading-7 text-slate-600">
-              Designing and implementing a multi-modal classification, RAG, and
-              recommendation pipeline. Working with the existing data warehouse,
-              codebase, and MCP server.
-            </p>
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <div className="flex flex-col justify-between gap-2 md:flex-row">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+                2026–Present · London
+              </p>
+              <h3 className="mt-2 text-xl font-semibold">
+                External AI Consultant & Engineer
+              </h3>
+              <p className="mt-1 text-slate-500">
+                <a
+                  href="https://www.ayrshare.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-700 hover:underline"
+                >
+                  Ayrshare
+                </a>{" "}
+                · Social media API for apps and AI agents
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
-              2025–Present
-            </p>
-            <h3 className="mt-2 text-xl font-semibold">
-              Research Intern & Assistant
-            </h3>
-            <p className="mt-1 text-slate-500">
-              Princeton University,{" "}
-              <a
-                href="https://hassonlab.princeton.edu"
-                target="_blank"
-                className="text-blue-700 hover:underline"
-              >
-                Hasson Lab
-              </a>
-              {" "}· Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
-            </p>
-            <p className="mt-4 leading-7 text-slate-600">
-              Using Machine Learning to enhance our understanding of how the
-              brain processes and represents naturalistic language, with an
-              emphasis on designing and evaluating meaningful ways to represent
-              linguistic features. Included working with and integrating new pipelines and features into existing code-base (mostly Python).
-              See the CCN extended abstracts in the Publications section for a sneak peek.
-            </p>
+          <p className="mt-6 leading-7 text-slate-600">
+            Ayrshare is building an AI product that tells its customers what
+            kind of post will perform, grounded in real engagement data. I own
+            that pipeline end to end: a pseudonymized daily sync from production
+            into a BigQuery warehouse, multimodal LLM labeling of posts against
+            a fixed feature taxonomy, and the statistical modeling that
+            separates the post features that actually move reach and engagement
+            from the ones that only look like they do. The results are designed
+            to be served to customers’ own agents through MCP tools.
+          </p>
+
+          <p className="mt-4 leading-7 text-slate-600">
+            The role is as much about people as about code. I work directly
+            with the CEO on product direction, with the engineering team on the
+            boundary between production and the analytics project, and with
+            beta customers on the questions they actually want answered. A good
+            part of the job is translating between those conversations and what
+            the data can honestly support.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "Python",
+              "Node.js",
+              "BigQuery",
+              "Cloud Functions",
+              "Vertex AI (Gemini)",
+              "CatBoost & SHAP",
+              "MCP",
+            ].map((tag) => (
+              <span key={tag} className={pill}>
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -128,26 +152,17 @@ export default function Home() {
               S. Nastase, A. Goldstein, O. Devinsky, A. Flinker, and U. Hasson
             </p>
             <p className="mt-1 text-sm text-slate-400">
-              9th Annual Conference on Cognitive Computational Neuroscience · 2026
+              9th Annual Conference on Cognitive Computational Neuroscience,
+              New York · 2026
             </p>
-          </div>
-
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
-              Under Review · NeurIPS 2026
-            </p>
-            <h3 className="mt-2 text-lg font-semibold leading-snug">
-              NeuroCast: Neural Decoding Benchmarks for Naturalistic Speech in
-              Human ECoG
-            </h3>
-            <p className="mt-2 text-sm text-slate-500">
-              Z. Paris, A. Bhattacharjee, A. L. Lee, J. Han, D. D. Han, G. Peeper,
-              S. S. Z. Yang, L. Niekerken, Z. Zada, P. S. Scotti, J. Cha, U. Hasson,
-              and I. Jalon
-            </p>
-            <p className="mt-1 text-sm text-slate-400">
-              Manuscript under review · NeurIPS 2026
-            </p>
+            <a
+              href="https://openreview.net/forum?id=kFoXJzTPOI"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline"
+            >
+              View on OpenReview →
+            </a>
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
@@ -163,7 +178,8 @@ export default function Home() {
               S. Nastase, A. Goldstein, O. Devinsky, A. Flinker, and U. Hasson
             </p>
             <p className="mt-1 text-sm text-slate-400">
-              9th Annual Conference on Cognitive Computational Neuroscience · 2026
+              9th Annual Conference on Cognitive Computational Neuroscience,
+              New York · 2026
             </p>
             <a
               href="/distributed-sensitivity.pdf"
@@ -175,8 +191,8 @@ export default function Home() {
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
-              Manuscript accepted · SORO
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+              Published · International Journal of Social Robotics
             </p>
             <h3 className="mt-2 text-lg font-semibold leading-snug">
               Examining the Potential of Social Robots to Increase Adherence in
@@ -187,15 +203,26 @@ export default function Home() {
               S. Struijs
             </p>
             <p className="mt-1 text-sm text-slate-400">
-              Manuscript under review · International Journal of Social Robotics · 2024
+              International Journal of Social Robotics, 18(6), 83 · 2026 · Open
+              access
             </p>
-            <a
-              href="/poster.pdf"
-              target="_blank"
-              className="mt-3 inline-block text-sm font-medium text-blue-700 hover:underline"
-            >
-              View ETMAAL 2024 Poster →
-            </a>
+            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1">
+              <a
+                href="https://doi.org/10.1007/s12369-026-01417-8"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-blue-700 hover:underline"
+              >
+                Read the paper →
+              </a>
+              <a
+                href="/poster.pdf"
+                target="_blank"
+                className="text-sm font-medium text-blue-700 hover:underline"
+              >
+                View ETMAAL 2024 poster →
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -211,9 +238,17 @@ export default function Home() {
         <div className="mt-6 space-y-6">
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="flex flex-col justify-between gap-2 md:flex-row">
-              <h3 className="text-xl font-semibold">
-                External AI Consultant & Engineer — Ayrshare
-              </h3>
+              <div>
+                <h3 className="text-xl font-semibold">
+                  External AI Consultant & Engineer — Ayrshare
+                </h3>
+                <p className="mt-1 text-slate-600">London · Remote</p>
+                <p className="mt-4 leading-7 text-slate-600">
+                  Owner of Ayrshare’s data and AI recommendation pipeline, from
+                  the production sync to the models and how their findings are
+                  served. Described in full under Current Work.
+                </p>
+              </div>
               <p className="whitespace-nowrap font-medium text-slate-500">
                 2026–Present
               </p>
@@ -230,15 +265,24 @@ export default function Home() {
                   <a
                     href="https://hassonlab.princeton.edu"
                     target="_blank"
+                    rel="noreferrer"
                     className="text-blue-700 hover:underline"
                   >
                     Hasson Lab
                   </a>{" "}
-                  · Neuroscience
+                  · Supervised by Prof. Uri Hasson and Dr. Itamar Jalon
+                </p>
+                <p className="mt-4 leading-7 text-slate-600">
+                  Used machine learning to study how the brain processes and
+                  represents naturalistic language, with an emphasis on
+                  designing and evaluating meaningful ways to represent
+                  linguistic features. Built new pipelines and features into
+                  the lab’s existing Python codebase. Two CCN 2026 extended
+                  abstracts came out of this work; see Publications.
                 </p>
               </div>
               <p className="whitespace-nowrap font-medium text-slate-500">
-                2025–Present
+                2025–2026
               </p>
             </div>
           </div>
@@ -275,7 +319,8 @@ export default function Home() {
                   Designed a study in collaboration with clinical therapists to compare
                   efficacy, alliance, and adherence to a screen-based control. Conducted
                   at VU University Amsterdam, Leiden University, and the University of
-                  Amsterdam.
+                  Amsterdam. Published in the International Journal of Social Robotics
+                  in 2026.
                 </p>
               </div>
 
@@ -416,11 +461,14 @@ export default function Home() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {[
-            "Agentic AI",
-            "Data Processing, Analysis & Visualization",
-            "Deep / Machine / Reinforcement Learning",
-            "Neural Signal Processing",
+            "Agentic AI & MCP",
+            "Recommendation Systems",
             "NLP & Large Language Models",
+            "Multimodal LLM Labeling & Evaluation",
+            "Deep / Machine / Reinforcement Learning",
+            "Data Pipelines on Google Cloud",
+            "Data Processing, Analysis & Visualization",
+            "Neural Signal Processing",
           ].map((skill) => (
             <div
               key={skill}
@@ -439,11 +487,10 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap gap-3">
           {[
             "Piano",
-            "Field Hockey",
-            "Football – Princeton University Club Soccer",
+            "Football",
             "Gym",
             "Ice Speedskating",
-            "Running – 4× Half Marathon",
+            "Running",
             "Skiing",
             "Snowboarding",
             "Swimming",
@@ -465,8 +512,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight">Contact</h2>
 
           <p className="mt-4 max-w-2xl text-slate-300">
-            Feel free to reach out regarding research opportunities,
-            collaborations, or professional opportunities.
+            Based in London. Feel free to reach out about work, research, or
+            collaborations.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -480,6 +527,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/gidonpeeper"
               target="_blank"
+              rel="noreferrer"
               className="rounded-xl border border-slate-700 px-5 py-3 font-medium text-white transition hover:bg-slate-800"
             >
               LinkedIn
