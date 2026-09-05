@@ -20,8 +20,8 @@ export default function Home() {
               I am motivated to use AI not for its own sake, but where it earns
               its place: balancing stochasticity for optimization and efficiency
               with determinism for interpretable outcomes. I currently live in
-              London and work as an AI contractor for Ayrshare, where I own a
-              data and recommendation pipeline end to end. Before that, I spent
+              London and work as an AI contractor for Ayrshare, where I build
+              its data and recommendation pipeline. Before that, I spent
               a year in Princeton’s Hasson Lab using language models to study
               how the brain processes natural conversation.
             </p>
@@ -29,7 +29,7 @@ export default function Home() {
             <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
               I enjoy analyzing complex problems from multiple perspectives, and
               my experience as a teacher and in student leadership helps me
-              communicate outcomes to people from very different backgrounds.
+              communicate outcomes to people from different backgrounds.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -97,23 +97,19 @@ export default function Home() {
           </div>
 
           <p className="mt-6 leading-7 text-slate-600">
-            Ayrshare is building an AI product that tells its customers what
-            kind of post will perform, grounded in real engagement data. I own
-            that pipeline end to end: a pseudonymized daily sync from production
-            into a BigQuery warehouse, multimodal LLM labeling of posts against
-            a fixed feature taxonomy, and the statistical modeling that
-            separates the post features that actually move reach and engagement
-            from the ones that only look like they do. The results are designed
-            to be served to customers’ own agents through MCP tools.
+            Ayrshare is building an AI feature that tells customers what kind
+            of post is likely to perform, based on their own engagement data. I
+            build the pipeline behind it: a pseudonymized daily sync from
+            production into BigQuery, multimodal LLM labeling of posts against
+            a fixed feature taxonomy, and statistical modeling of which post
+            features relate to reach and engagement. The results are designed
+            to be served to customers’ agents through MCP tools.
           </p>
 
           <p className="mt-4 leading-7 text-slate-600">
-            The role is as much about people as about code. I work directly
-            with the CEO on product direction, with the engineering team on the
-            boundary between production and the analytics project, and with
-            beta customers on the questions they actually want answered. A good
-            part of the job is translating between those conversations and what
-            the data can honestly support.
+            I work with the CEO on product direction, with the engineering team
+            on the boundary between production and analytics, and with beta
+            customers on the questions they want answered.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2">
@@ -244,9 +240,9 @@ export default function Home() {
                 </h3>
                 <p className="mt-1 text-slate-600">London · Remote</p>
                 <p className="mt-4 leading-7 text-slate-600">
-                  Owner of Ayrshare’s data and AI recommendation pipeline, from
-                  the production sync to the models and how their findings are
-                  served. Described in full under Current Work.
+                  Building Ayrshare’s data and AI recommendation pipeline, from
+                  the production sync to the models and how their results are
+                  served. Described under Current Work.
                 </p>
               </div>
               <p className="whitespace-nowrap font-medium text-slate-500">
@@ -277,8 +273,7 @@ export default function Home() {
                   represents naturalistic language, with an emphasis on
                   designing and evaluating meaningful ways to represent
                   linguistic features. Built new pipelines and features into
-                  the lab’s existing Python codebase. Two CCN 2026 extended
-                  abstracts came out of this work; see Publications.
+                  the lab’s existing Python codebase.
                 </p>
               </div>
               <p className="whitespace-nowrap font-medium text-slate-500">
