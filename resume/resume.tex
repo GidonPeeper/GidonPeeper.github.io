@@ -69,11 +69,13 @@
   \vspace{1pt}% 1pt before the description or bullet list that follows
 }
 
+\newcommand{\yrs}[2]{~(#1~--~#2)}  % unbreakable year range, tied to the preceding word
 % --- lists ---------------------------------------------------------------------------
 \newcommand{\cvbullet}{\fontsize{6}{6}\selectfont$\bullet$}
 \newenvironment{sideitems}{%
   \begin{itemize}[label=\cvbullet, leftmargin=8.8pt, labelsep=4.25pt,
-                  topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=1pt]}
+                  topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=1pt,
+                  before={\raggedright\hyphenpenalty=10000 \exhyphenpenalty=10000 }]}
   {\end{itemize}}
 \newenvironment{mainitems}{%
   \begin{itemize}[label={\color{accent}\cvbullet}, leftmargin=9.6pt, labelsep=4.25pt,
@@ -101,21 +103,20 @@
 
 % --- sidebar content -----------------------------------------------------------------
 \newcommand{\sidebarcontent}{%
-  % \parbox implies \sloppy; the original sidebar was set \fussy (it has a few
-  % overfull lines), so restore normal tolerance to get identical line breaks.
-  \footnotesize\fussy\setlength{\parskip}{0pt}\setlength{\parindent}{0pt}%
+  % \parbox implies \sloppy; use normal tolerance and a slightly ragged right
+  % edge (finite \rightskip) so the narrow column is neither gappy nor overfull.
+  \footnotesize\fussy\rightskip=0pt plus 2em\setlength{\parskip}{0pt}\setlength{\parindent}{0pt}%
   \sidesection*{About me}
   I am motivated to use AI not just for the sake of using it, but by balancing
   the stochasticity for optimization and efficiency with determinism for
-  interpretable outcomes.\\ % forced break, as in the original
-  Leveraging the theoretical foundation from my
+  interpretable outcomes. Leveraging the theoretical foundation from my
   coursework, I have experience in developing and integrating (agentic) AI for,
   and into my research and work. Furthermore, I enjoy analyzing complex problems
   from multiple perspectives, which, along with my experience as a teacher and
   leader of student initiatives, helps me communicate outcomes with stakeholders
-  from different backgrounds. I am excited to join an ambitious, curious,
-  intellectually driven team whose\\ % forced break, as in the original
-  feedback challenges me to think more critically and execute on a high level.\par
+  from different backgrounds. I love working with an ambitious, curious,
+  intellectually driven team whose feedback challenges me to think more
+  critically and execute on a high level.\par
 
   \sidesection{Details}
   \begin{sideitems}
@@ -129,37 +130,50 @@
 
   \sidesection{Technical skills}
   \begin{sideitems}
-    \item Data processing, analysis and visualization
-    \item Deep, Machine and Reinforcement Learning
-    \item NLP/LLMs and Agentic AI
+    \item Python, Node.js and BigQuery
+    \item Data pipelines on Google Cloud
+    \item NLP and large language models
+    \item Agentic AI and MCP
+    \item Multimodal LLM labeling and evaluation
+    \item Recommendation systems
+    \item ML, deep and reinforcement learning
+    \item Data analysis and visualization
+    \item Neural signal processing
   \end{sideitems}
 
   \sidesection{Extracurricular activities}
   \begin{sideitems}
-    \item Founder and President of the Dutch Student Association Princeton (2025 -- 2026)
-    \item Social and educational support for a 14--15 y/o neurodivergent student (2022 -- 2024)
-    \item Volunteer at Taglit Birthright Onward (2023 -- 2024)
-    \item Masterclass Communication and Media at Castro Communicatie (2023)
-    \item Football trainer/coach (2020 -- 2023)
-    \item Tutoring, privately and through institutions (2016 -- 2023)
-    \item International Science Summer Institute, Weizmann Institute (2020)
-    \item Field hockey referee (2017 -- 2022)
-    \item Ice speedskating instructor (2015 -- 2018)
+    \item Founder and President, Dutch Student Association Princeton\yrs{2025}{2026}
+    \item Social and educational support for a neurodivergent student\yrs{2022}{2024}
+    \item Volunteer at Taglit Birthright Onward\yrs{2023}{2024}
+    \item Masterclass Communication and Media at Castro Communicatie~(2023)
+    \item Football trainer/coach\yrs{2020}{2023}
+    \item Tutoring, privately and through institutions\yrs{2016}{2023}
+    \item International Science Summer Institute, Weizmann Institute~(2020)
+    \item Field hockey referee\yrs{2017}{2022}
+    \item Speedskating instructor\yrs{2015}{2018}
   \end{sideitems}
 
   \sidesection{Hobbies}
-  \begin{sideitems}
-    \item Piano
-    \item Gym
-    \item Field hockey
-    \item Football
-    \item Ice speedskating
-    \item Running
-    \item Skiing
-    \item Snowboarding
-    \item Swimming
-    \item Tennis
-  \end{sideitems}
+  \vspace{3pt}% list topsep, which a minipage would otherwise swallow
+  \noindent\begin{minipage}[t]{0.5\linewidth}
+    \begin{sideitems}
+      \item Piano
+      \item Gym
+      \item Field hockey
+      \item Football
+      \item Ice speedskating
+    \end{sideitems}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \begin{sideitems}
+      \item Running
+      \item Skiing
+      \item Snowboarding
+      \item Swimming
+      \item Tennis
+    \end{sideitems}
+  \end{minipage}\par
 }
 
 % Sidebar background and content are placed on the page background at shipout.

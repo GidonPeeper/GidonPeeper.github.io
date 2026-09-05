@@ -18,8 +18,7 @@ Requires a TeX distribution with `charter`, `tikz`, `enumitem`, `etoolbox`,
 
 ## Notes
 
-- The five "Overfull \hbox" warnings are inherited from the original layout
-  (the sidebar is set with normal tolerance and has a few tight lines).
-- A handful of forced line breaks (`\\`) and spacing quirks are marked with
-  comments; they exist only to match the earlier PDF and can be removed when
-  the text is next edited.
+- The sidebar is set with a slightly ragged right edge; its lists never
+  hyphenate and keep year ranges on one line (`\yrs{2020}{2023}`).
+- A few spacing quirks in the publication block are commented; they exist only
+  to match the earlier PDF and can be removed when the text is next edited.
